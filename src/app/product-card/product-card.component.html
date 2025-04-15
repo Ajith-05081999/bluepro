@@ -1,0 +1,16 @@
+<div class="product-card">
+    <div class="product-image">
+      <img [src]="image" [alt]="name">
+    </div>
+    <div class="product-info">
+      <h3>{{name}}</h3>
+      <p class="product-capacity">{{capacity}}</p>
+      <p class="product-description">{{description}}</p>
+      <div class="product-features">
+        <ul>
+          <li *ngFor="let feature of features">{{feature}}</li>
+        </ul>
+      </div>
+      <a [routerLink]="['/contact']" class="btn">Enquire Now</a>
+    </div>
+  </div>

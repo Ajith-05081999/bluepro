@@ -1,0 +1,126 @@
+<app-banner 
+backgroundImage="../../assets/background-image-home.png"
+title="Our Products"
+subtitle="Comprehensive range of voltage stabilizers for all your appliances">
+</app-banner>
+
+<section class="products-intro">
+<div class="container">
+  <div class="intro-content">
+    <h2>Protecting Your Valuable Electronics</h2>
+    <p>VoltGuard offers a wide range of voltage stabilizers designed to protect various appliances from power fluctuations. Our products combine advanced technology with durable construction to provide reliable protection for years to come.</p>
+  </div>
+</div>
+</section>
+
+<section class="product-categories">
+<div class="container">
+  <div class="category-filters">
+    <button 
+      [class.active]="selectedCategory === 'all'"
+      (click)="filterProducts('all')">
+      All Products
+    </button>
+    <button 
+      [class.active]="selectedCategory === 'ac'"
+      (click)="filterProducts('ac')">
+      AC Stabilizers
+    </button>
+    <button 
+      [class.active]="selectedCategory === 'refrigerator'"
+      (click)="filterProducts('refrigerator')">
+      Refrigerator Stabilizers
+    </button>
+    <button 
+      [class.active]="selectedCategory === 'tv'"
+      (click)="filterProducts('tv')">
+      TV & Electronics
+    </button>
+    <button 
+      [class.active]="selectedCategory === 'whole-house'"
+      (click)="filterProducts('whole-house')">
+      Whole House
+    </button>
+  </div>
+  
+  <div class="products-grid">
+    <app-product-card
+      *ngFor="let product of filteredProducts"
+      [image]="product.image"
+      [name]="product.name"
+      [capacity]="product.capacity"
+      [description]="product.description"
+      [features]="product.features">
+    </app-product-card>
+  </div>
+</div>
+</section>
+
+<section class="product-guide">
+<div class="container">
+  <h2 class="section-title">How to Choose the Right Stabilizer</h2>
+  <div class="guide-content">
+    <div class="guide-item">
+      <h3>1. Determine Your Appliance's Power Requirements</h3>
+      <p>Check the power rating (in watts or VA) of the appliance you want to protect. This information is usually found on the appliance's nameplate or in the user manual.</p>
+    </div>
+    
+    <div class="guide-item">
+      <h3>2. Consider Voltage Fluctuation Range</h3>
+      <p>Assess the typical voltage fluctuations in your area. Areas with severe fluctuations require stabilizers with a wider operating range.</p>
+    </div>
+    
+    <div class="guide-item">
+      <h3>3. Evaluate Additional Features</h3>
+      <p>Consider features like time delay protection, high/low voltage cut-off, surge protection, and digital displays based on your specific needs.</p>
+    </div>
+    
+    <div class="guide-item">
+      <h3>4. Account for Future Needs</h3>
+      <p>Choose a stabilizer with slightly higher capacity than currently required to accommodate any future upgrades to your appliances.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="faq">
+<div class="container">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="faq-items">
+    <div class="faq-item">
+      <h3>Why do I need a voltage stabilizer?</h3>
+      <p>Voltage stabilizers protect your appliances from damage caused by voltage fluctuations, which can reduce their lifespan and affect performance. They ensure a consistent voltage supply to your devices.</p>
+    </div>
+    
+    <div class="faq-item">
+      <h3>How long do stabilizers typically last?</h3>
+      <p>With proper maintenance, a quality voltage stabilizer can last 8-10 years or more, depending on usage conditions and the quality of components.</p>
+    </div>
+    
+    <div class="faq-item">
+      <h3>Can one stabilizer protect multiple appliances?</h3>
+      <p>Yes, whole-house or multi-appliance stabilizers can protect several devices. However, it's important to ensure the stabilizer's capacity is sufficient for the combined load of all connected appliances.</p>
+    </div>
+    
+    <div class="faq-item">
+      <h3>What's the difference between a stabilizer and a UPS?</h3>
+      <p>A stabilizer regulates voltage but doesn't provide backup power during outages. A UPS (Uninterruptible Power Supply) provides both voltage regulation and battery backup during power failures.</p>
+    </div>
+    
+    <div class="faq-item">
+      <h3>Do digital appliances need stabilizers?</h3>
+      <p>Yes, digital appliances often contain sensitive electronic components that can be damaged by voltage fluctuations. In fact, they may require more precise voltage regulation than older analog devices.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+  <div class="cta-content">
+    <h2>Need Help Selecting the Right Stabilizer?</h2>
+    <p>Our experts are ready to assist you in choosing the perfect voltage stabilizer for your specific needs.</p>
+    <a routerLink="/contact" class="btn btn-large">Contact Us</a>
+  </div>
+</div>
+</section>

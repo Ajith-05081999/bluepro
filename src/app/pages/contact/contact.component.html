@@ -1,0 +1,21 @@
+
+<div class="main">
+    <p style="font-family: sans-serif; font-weight: bold; font-size: 50px;">Contact Information</p>
+    <div class="space-y-4 text-gray-800" style="font-family: sans-serif; font-weight: 400; font-size: 25px;">
+      <p><strong>Name: </strong> {{ contactInfo.name }}</p>
+      <p><strong>Email: </strong> <a [href]="'mailto:' + contactInfo.email" class="text-blue-600 hover:underline">{{ contactInfo.email }}</a></p>
+      <p><strong>Contact: </strong> <a [href]="'tel:' + contactInfo.contact" class="hover:underline">{{ contactInfo.contact }}</a></p>
+      <p><strong>WhatsApp: </strong> <a [href]="'https://wa.me/' + contactInfo.whatsapp" target="_blank" class="text-green-600 hover:underline">{{ contactInfo.whatsapp }}</a></p>
+      <p>
+        <strong>Address:</strong>
+        <a 
+          [href]="googleMapsLink" 
+          target="_blank" 
+          class="text-blue-600 hover:underline">
+          {{ contactInfo.address }}
+        </a>
+      </p>
+      
+    </div>
+  </div>
+  

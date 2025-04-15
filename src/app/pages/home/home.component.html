@@ -1,0 +1,119 @@
+
+<app-banner 
+backgroundImage="../../assets/background-image-home.png"
+title="Protect Your Electronics with Premium Voltage Stabilizers"
+subtitle="Reliable power protection solutions for your home and office appliances"
+buttonText="Explore Products"
+buttonLink="/product">
+</app-banner>
+
+<section class="features">
+<div class="container">
+  <h2 class="section-title">Why Choose Bluepro Stabilizers?</h2>
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Superior Protection</h3>
+      <p>Advanced circuitry that protects your appliances from voltage fluctuations, surges, and spikes.</p>
+    </div>
+    
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-bolt"></i>
+      </div>
+      <h3>Quick Response Time</h3>
+      <p>Rapid voltage correction ensures your devices receive stable power even during extreme fluctuations.</p>
+    </div>
+    
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-cog"></i>
+      </div>
+      <h3>Durable Build</h3>
+      <p>Constructed with high-quality components for long-lasting performance and reliability.</p>
+    </div>
+    
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-leaf"></i>
+      </div>
+      <h3>Energy Efficient</h3>
+      <p>Optimized power consumption helps reduce electricity bills while protecting your appliances.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="products-preview">
+<div class="container">
+  <h2 class="section-title">Our Popular Products</h2>
+  <div class="products-grid">
+    <app-product-card
+      image="/assets/images/ac-stabilizer.jpg"
+      name="AC Voltage Stabilizer"
+      capacity="4 kVA - 5 kVA"
+      description="Specially designed for air conditioners to handle high power demands."
+      [features]="['Wide operating voltage range', 'Digital display', 'Time delay system', 'Thermal overload protection']">
+    </app-product-card>
+    
+    <app-product-card
+      image="/assets/images/refrigerator-stabilizer.jpg"
+      name="Refrigerator Stabilizer"
+      capacity="500 VA - 1 kVA"
+      description="Compact stabilizer for refrigerators and freezers."
+      [features]="['High-low voltage cut-off', 'Auto restart feature', 'Wall mountable design', 'LED indicators']">
+    </app-product-card>
+    
+    <app-product-card
+      image="/assets/images/tv-stabilizer.jpg"
+      name="TV & Electronics Stabilizer"
+      capacity="100 VA - 500 VA"
+      description="Protect your sensitive electronic devices from voltage fluctuations."
+      [features]="['Surge protection', 'Compact design', 'Multiple socket outputs', 'Noise filtration']">
+    </app-product-card>
+  </div>
+  <div class="view-all">
+    <a [routerLink]="'/product'" class="btn">View All Products</a>
+  </div>
+</div>
+</section>
+
+<section class="testimonials">
+<div class="container">
+  <h2 class="section-title">What Our Customers Say</h2>
+  <div class="testimonials-grid">
+    <app-testimonial
+      quote="We installed VoltGuard stabilizers for all our critical equipment. It's been two years and we haven't faced any power-related issues since then."
+      name="John Smith"
+      title="Business Owner"
+      image="/assets/images/testimonial1.jpg">
+    </app-testimonial>
+    
+    <app-testimonial
+      quote="The AC stabilizer from VoltGuard has been a lifesaver during summer months when power fluctuations are common in our area."
+      name="Sarah Johnson"
+      title="Homeowner"
+      image="/assets/images/testimonial2.jpg">
+    </app-testimonial>
+    
+    <app-testimonial
+      quote="Excellent product quality and after-sales service. I recommend VoltGuard to anyone looking for reliable power protection solutions."
+      name="Michael Chen"
+      title="IT Manager"
+      image="/assets/images/testimonial3.jpg">
+    </app-testimonial>
+  </div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+  <div class="cta-content">
+    <h2>Ready to Protect Your Valuable Electronics?</h2>
+    <p>Contact us today for expert advice on choosing the right stabilizer for your needs.</p>
+    <a routerLink="/contact" class="btn btn-large">Get in Touch</a>
+  </div>
+</div>
+</section>

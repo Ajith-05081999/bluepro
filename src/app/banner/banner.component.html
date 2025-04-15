@@ -1,0 +1,10 @@
+]<div class="banner" [style.background-image]="'url(' + backgroundImage + ')'">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="banner-content">
+        <h1>{{title}}</h1>
+        <p *ngIf="subtitle">{{subtitle}}</p>
+        <a *ngIf="buttonText" [routerLink]="buttonLink" class="btn">{{buttonText}}</a>
+      </div>
+    </div>
+  </div>

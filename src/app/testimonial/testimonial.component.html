@@ -1,0 +1,14 @@
+<div class="testimonial">
+    <div class="testimonial-content">
+      <p>"{{quote}}"</p>
+    </div>
+    <div class="testimonial-author">
+      <div class="author-image" *ngIf="image">
+        <img [src]="image" [alt]="name">
+      </div>
+      <div class="author-info">
+        <h4>{{name}}</h4>
+        <p>{{title}}</p>
+      </div>
+    </div>
+  </div>
