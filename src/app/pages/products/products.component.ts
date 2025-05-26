@@ -5,14 +5,22 @@ import { ProductCardComponent } from '../../product-card/product-card.component'
 import { RouterModule } from '@angular/router';
 // make sure this exists
 
+interface ProductVariant {
+  name: string;
+  capacity?: string;
+  range?: string;
+}
+
 interface Product {
   id: number;
   name: string;
+  head: string;
   category: string;
   capacity: string;
   image: string;
-  description: string;
+  
   features: string[];
+  variants?: { name: string; capacity?: string; range?: string; image?: string }[];
 }
 
 @Component({
@@ -28,49 +36,66 @@ export class ProductsComponent {
   products: Product[] = [
     {
       id: 1,
-      name: 'AC Voltage Stabilizer - Standard',
-      category: 'ac',
-      capacity: '4 kVA',
-      image: '/assets/images/ac-stabilizer.jpg',
-      description: 'Designed for window and split air conditioners up to 1.5 tons.',
-      features: ['Wide operating voltage range: 140V-280V', 'Digital display', 'Time delay system', 'Thermal overload protection']
+      name: 'Standard Stabilizers',
+      head: 'Window AC Stabilizer',
+      category: 'window-ac',
+      capacity: '4 KVA / 5 KVA',
+      image: '../../assets/365A8851.JPG',
+      
+      features: [ 'Digital display', 'Time delay system', 'Thermal overload protection','3 Years Warranty '],
+      variants: [
+        { name: 'Standard', capacity: '1.5 Ton AC', range: '175V-270V' },
+        { name: 'Standard', capacity: '2 Ton AC', range: '175V-270V' },
+        { name: 'Deluxe', capacity: '1.5 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' },
+        { name: 'Deluxe', capacity: '2 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' }
+      ]
     },
     {
       id: 2,
-      name: 'AC Voltage Stabilizer - Premium',
-      category: 'ac',
-      capacity: '5 kVA',
-      image: '/assets/images/ac-stabilizer-premium.jpg',
-      description: 'High-capacity stabilizer for 2-ton air conditioners and heavy-duty applications.',
-      features: ['Ultra-wide operating range: 130V-290V', 'LCD display with voltage monitoring', 'Advanced surge protection', 'Auto restart with time delay']
+      name: 'Double boost Stabilizers',
+      head: 'Double boost Stabilizers',
+      category: 'split-ac',
+      capacity: '4 KVA/5 KVA',
+      image: '../../assets/365A8894.JPG',
+    
+      features: ['Wide input range', 'Advanced surge protection', 'Wall mountable', ' 3 Years Warranty '],
+      variants: [
+        { name: 'Supreme', capacity: '1.5 Ton AC', range: '150V-280V' },
+        { name: 'Supreme', capacity: '2 Ton AC', range: '150V-280V' },
+        { name: 'Majestic', capacity: '1.5 Ton AC', range: '130V-280V' },
+        { name: 'Majestic', capacity: '2 Ton AC', range: '130V-280V' }
+      ]
     },
     {
       id: 3,
-      name: 'Refrigerator Stabilizer - Basic',
-      category: 'refrigerator',
-      capacity: '500 VA',
-      image: '/assets/images/refrigerator-stabilizer.jpg',
-      description: 'Compact stabilizer for standard refrigerators and freezers.',
-      features: ['High-low voltage cut-off', 'Auto restart feature', 'Wall mountable design', 'LED indicators']
+      name: 'Triple boost Stabilizers',
+      head: 'Triple boost Stabilizers',
+      category: 'inverter-ac',
+      capacity: '4 KVA/5 KVA',
+      image: '../../assets/365A8894.JPG',
+     
+      features: ['High Voltage cut-off', 'Energy efficient', 'Digital display', 'Silent operation','3 Years Warranty '],
+      variants: [
+        { name: 'Diamond', capacity: '1.5 Ton AC', range: '100V-280V' },
+        { name: 'Diamond', capacity: '2 Ton AC', range: '100V-280V' },
+        { name: 'Platinum', capacity: '1.5 Ton AC', range: '90V-280V' },
+        { name: 'Platinum', capacity: '2 Ton AC', range: '90V-280V' },
+      ]
     },
     {
       id: 4,
-      name: 'Refrigerator Stabilizer - Advanced',
-      category: 'refrigerator',
-      capacity: '1 kVA',
-      image: '/assets/images/refrigerator-stabilizer-advanced.jpg',
-      description: 'Enhanced protection for high-end refrigerators and deep freezers.',
-      features: ['Precision voltage regulation', 'Digital display', 'Energy-saving mode', 'Noise filtration']
-    },
-    {
-      id: 5,
-      name: 'TV & Electronics Stabilizer - Mini',
-      category: 'tv',
-      capacity: '100 VA',
-      image: '/assets/images/tv-stabilizer.jpg',
-      description: 'Compact stabilizer for LED',
-      features: ['Precision voltage regulation', 'Digital display', 'Energy-saving mode', 'Noise filtration']
-    },
+      name: 'Deep freezer Stabilizers',
+      head: 'Deep freezer Stabilizers',
+      category: 'heavy-duty-ac',
+      capacity: '1 KVA/ 2 KVA',
+      image: '../../assets/365A8894.JPG',
+
+      features: ['Ultra-wide operating range','Digital display', 'Auto restart', 'Heavy load support','3 Years Warranty '],
+      variants: [
+        { name: '130V', capacity: '1KVA' },
+        { name: '130V', capacity: '2KVA' }
+      ]
+    }
   ];
 
   filteredProducts: Product[] = [...this.products]; // Initialize with all products

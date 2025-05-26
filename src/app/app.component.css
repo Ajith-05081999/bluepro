@@ -1,0 +1,46 @@
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-size: 18px;
+  background: #f7fafd;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 0.5em;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn, .btn-large {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.btn:hover, .btn-large:hover {
+  background: #125ea9;
+}

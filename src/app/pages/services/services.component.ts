@@ -6,7 +6,7 @@ import { BannerComponent } from '../../banner/banner.component';
   standalone: true,
   imports: [BannerComponent],
   templateUrl: './services.component.html',
-  styleUrl: './services.component.css'
+  styleUrls: ['./services.component.css']
 })
 export class ServicesComponent {
 

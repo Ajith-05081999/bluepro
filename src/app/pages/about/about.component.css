@@ -1,5 +1,43 @@
+body, .products-intro, .container, * {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif !important;
+}
+
+.about-intro {
+  padding: 3rem 0;
+  background: #f8fbff;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,86,179,0.08);
+  margin-bottom: 2rem;
+}
+
+.section-title, .about-intro h2 {
+  font-size: 2rem;
+  color: #0056b3;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image img {
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,86,179,0.09);
+  max-width: 350px;
+}
+
+
 .about-intro {
     padding: 5rem 0;
+  }
+
+  .section-title{
+    text-align: center;
   }
   
   .about-grid {

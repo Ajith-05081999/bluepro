@@ -3,14 +3,23 @@
       <img [src]="image" [alt]="name">
     </div>
     <div class="product-info">
-      <h3>{{name}}</h3>
-      <p class="product-capacity">{{capacity}}</p>
-      <p class="product-description">{{description}}</p>
-      <div class="product-features">
-        <ul>
-          <li *ngFor="let feature of features">{{feature}}</li>
-        </ul>
-      </div>
-      <a [routerLink]="['/contact']" class="btn">Enquire Now</a>
+  <h3>{{name}}</h3>
+  <div class="product-capacity" *ngIf="capacity">
+      {{ capacity }}
     </div>
+    <div class="product-range" *ngIf="range">
+      Voltage Range: {{ range }}
+    </div>
+    <div class="product-range" *ngIf="!range && variants && variants.length > 0 && variants[0].range">
+      Voltage Range: {{ variants[0].range }}
+    </div>
+  <p class="product-description">{{description}}</p>
+  <div class="product-features">
+    <span *ngIf="features && features.length > 0">{{ features.join(', ') }}</span>
+  </div>
+
+  
+
+  <a [routerLink]="['/contact']" class="btn">Enquire Now</a>
+</div>
   </div>

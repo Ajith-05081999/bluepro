@@ -10,11 +10,12 @@ import { BannerComponent } from '../../banner/banner.component';
 })
 export class ContactComponent {
   contactInfo = {
-    name: 'Raja',
-    email: 'bluepro@gmail.com',
-    contact: '585935987',
-    whatsapp: '454556565',
-    address: '3rd main road bluepro office 1st floor chennai - 609894'
+    name: 'Rajaraman',
+    email: 'blueprocustomercare@gmail.com',
+    contact: '+919940184161',
+    whatsapp: '+919940184161',
+    customerCare: '04443595646',
+    address: 'NO.20,kesari nagar main road adambakkam, chennai - 600088'
   };
   googleMapsLink: string;
 

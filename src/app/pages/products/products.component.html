@@ -1,5 +1,5 @@
 <app-banner 
-backgroundImage="../../assets/background-image-home.png"
+backgroundImage="../../assets/365A8894.JPG"
 title="Our Products"
 subtitle="Comprehensive range of voltage stabilizers for all your appliances">
 </app-banner>
@@ -19,40 +19,98 @@ subtitle="Comprehensive range of voltage stabilizers for all your appliances">
     <button 
       [class.active]="selectedCategory === 'all'"
       (click)="filterProducts('all')">
-      All Products
+      All AC Stabilizers
     </button>
     <button 
-      [class.active]="selectedCategory === 'ac'"
-      (click)="filterProducts('ac')">
-      AC Stabilizers
+      [class.active]="selectedCategory === 'window-ac'"
+      (click)="filterProducts('window-ac')">
+      Standard Stabilizers
     </button>
     <button 
-      [class.active]="selectedCategory === 'refrigerator'"
-      (click)="filterProducts('refrigerator')">
-      Refrigerator Stabilizers
+      [class.active]="selectedCategory === 'split-ac'"
+      (click)="filterProducts('split-ac')">
+      Double boost Stabilizers
     </button>
     <button 
-      [class.active]="selectedCategory === 'tv'"
-      (click)="filterProducts('tv')">
-      TV & Electronics
+      [class.active]="selectedCategory === 'inverter-ac'"
+      (click)="filterProducts('inverter-ac')">
+      Triple boost Stabilizers
     </button>
     <button 
-      [class.active]="selectedCategory === 'whole-house'"
-      (click)="filterProducts('whole-house')">
-      Whole House
+      [class.active]="selectedCategory === 'heavy-duty-ac'"
+      (click)="filterProducts('heavy-duty-ac')">
+      Deep freezer Stabilizers
     </button>
   </div>
   
   <div class="products-grid">
-    <app-product-card
-      *ngFor="let product of filteredProducts"
-      [image]="product.image"
-      [name]="product.name"
-      [capacity]="product.capacity"
-      [description]="product.description"
-      [features]="product.features">
-    </app-product-card>
-  </div>
+  <!-- Special handling for Standard Stabilizers (window-ac) -->
+  <ng-container *ngIf="selectedCategory === 'window-ac'; else doubleBoost">
+    <ng-container *ngFor="let v of filteredProducts[0]?.variants">
+      <app-product-card
+      [image]="v.image || filteredProducts[0]?.image || ''"
+        [name]="(filteredProducts[0]?.name || '') + ' - ' + v.name"
+        [capacity]="v.capacity || ''"
+        
+        [features]="filteredProducts[0]?.features || []"
+        [range]="v.range || ''">
+      </app-product-card>
+    </ng-container>
+</ng-container>
+<ng-template #doubleBoost>
+  <ng-container *ngIf="selectedCategory === 'split-ac'; else tripleBoost">
+    <ng-container *ngFor="let v of filteredProducts[0]?.variants">
+      <app-product-card
+        [image]="filteredProducts[0]?.image || ''"
+        [name]="(filteredProducts[0]?.name || '') + ' - ' + v.name"
+        [capacity]="v.capacity || ''"
+      
+        [features]="filteredProducts[0]?.features || []"
+        [range]="v.range || ''">
+      </app-product-card>
+    </ng-container>
+  </ng-container>
+</ng-template>
+<ng-template #tripleBoost>
+  <ng-container *ngIf="selectedCategory === 'inverter-ac'; else deepFreezer">
+    <ng-container *ngFor="let v of filteredProducts[0]?.variants">
+      <app-product-card
+        [image]="filteredProducts[0]?.image || ''"
+        [name]="(filteredProducts[0]?.name || '') + ' - ' + v.name"
+        [capacity]="v.capacity || ''"
+        [range]="v.range || ''"
+        [features]="filteredProducts[0]?.features || []"
+        [variants]="filteredProducts[0]?.variants || []">
+      </app-product-card>
+    </ng-container>
+  </ng-container>
+</ng-template>
+<ng-template #deepFreezer>
+  <ng-container *ngIf="selectedCategory === 'heavy-duty-ac'; else normalProducts">
+    <ng-container *ngFor="let v of filteredProducts[0]?.variants">
+      <app-product-card
+        [image]="filteredProducts[0]?.image || ''"
+        [name]="(filteredProducts[0]?.name || '') + ' - ' + v.name"
+        [capacity]="v.capacity || ''"
+    
+        [features]="filteredProducts[0]?.features || []">
+      </app-product-card>
+    </ng-container>
+  </ng-container>
+</ng-template>
+<ng-template #normalProducts>
+  <app-product-card
+    *ngFor="let product of filteredProducts"
+    [image]="product.image"
+    [name]="product.name"
+    [capacity]="product.capacity"
+    
+    [features]="product.features"
+    [variants]="product.variants || []"
+    [range]="product.variants && product.variants.length > 0 ? (product.variants[0].range ?? '') : ''">
+  </app-product-card>
+</ng-template>
+</div>
 </div>
 </section>
 
@@ -83,7 +141,7 @@ subtitle="Comprehensive range of voltage stabilizers for all your appliances">
 </div>
 </section>
 
-<section class="faq">
+<!-- <section class="faq">
 <div class="container">
   <h2 class="section-title">Frequently Asked Questions</h2>
   <div class="faq-items">
@@ -113,7 +171,7 @@ subtitle="Comprehensive range of voltage stabilizers for all your appliances">
     </div>
   </div>
 </div>
-</section>
+</section> -->
 
 <section class="cta">
 <div class="container">

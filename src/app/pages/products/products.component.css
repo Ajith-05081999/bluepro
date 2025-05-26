@@ -1,3 +1,68 @@
+body, .products-intro, .container, * {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif !important;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #0056b3;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,86,179,0.09);
+  transition: box-shadow 0.2s, transform 0.2s;
+  padding: 1.5rem 1.2rem;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 34px rgba(0,86,179,0.15);
+  transform: translateY(-6px) scale(1.01);
+}
+
+.btn, .btn-large {
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,86,179,0.07);
+}
+
+.btn:hover, .btn-large:hover {
+  background: #003366;
+}
+
+.category-filters button {
+  background: #e3eafc;
+  color: #003366;
+  border: none;
+  padding: 0.7rem 1.7rem;
+  border-radius: 22px;
+  font-size: 1.05rem;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.category-filters button.active, .category-filters button:hover {
+  background: #1976d2;
+  color: #fff;
+}
+
+
 .products-intro {
     padding: 5rem 0;
     text-align: center;
@@ -11,11 +76,13 @@
   .intro-content h2 {
     color: #0056b3;
     margin-bottom: 1.5rem;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   }
   
   .intro-content p {
     color: #555;
     line-height: 1.6;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
     font-size: 1.1rem;
   }
   
@@ -45,17 +112,19 @@
   .category-filters button:hover {
     background-color: #0056b3;
     color: #fff;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   }
   
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(minmax(300px, 1fr));
     gap: 2rem;
   }
   
   .product-guide {
     padding: 5rem 0;
     background-color: #f9f9f9;
+    text-align: center;
   }
   
   .guide-content {
@@ -114,29 +183,35 @@
     padding: 5rem 0;
     background-color: #0056b3;
     color: #fff;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   }
   
   .cta-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   }
   
   .cta-content h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   }
   
   .cta-content p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   }
   
   .btn-large {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
     background-color: #fff;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
     color: #0056b3;
+
   }
   
   .btn-large:hover {

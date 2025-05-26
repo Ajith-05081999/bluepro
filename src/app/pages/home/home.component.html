@@ -1,15 +1,14 @@
-
 <app-banner 
-backgroundImage="../../assets/background-image-home.png"
-title="Protect Your Electronics with Premium Voltage Stabilizers"
-subtitle="Reliable power protection solutions for your home and office appliances"
+backgroundImage="../../assets/365A8894.JPG"
+title="Protect Your AC with Premium Voltage Stabilizers"
+subtitle="Reliable power protection solutions for your home and office AC"
 buttonText="Explore Products"
 buttonLink="/product">
 </app-banner>
 
 <section class="features">
 <div class="container">
-  <h2 class="section-title">Why Choose Bluepro Stabilizers?</h2>
+  <h2 class="section-title">Why Choose BLUEPRO Stabilizers?</h2>
   <div class="features-grid">
     <div class="feature-item">
       <div class="feature-icon">
@@ -40,7 +39,7 @@ buttonLink="/product">
         <i class="fas fa-leaf"></i>
       </div>
       <h3>Energy Efficient</h3>
-      <p>Optimized power consumption helps reduce electricity bills while protecting your appliances.</p>
+      <p>Optimized power consumption </p>
     </div>
   </div>
 </div>
@@ -50,37 +49,21 @@ buttonLink="/product">
 <div class="container">
   <h2 class="section-title">Our Popular Products</h2>
   <div class="products-grid">
-    <app-product-card
-      image="/assets/images/ac-stabilizer.jpg"
+    <app-product-card style="text-align: center;"
+      image="../../assets/365A8851.JPG"
       name="AC Voltage Stabilizer"
       capacity="4 kVA - 5 kVA"
       description="Specially designed for air conditioners to handle high power demands."
       [features]="['Wide operating voltage range', 'Digital display', 'Time delay system', 'Thermal overload protection']">
     </app-product-card>
-    
-    <app-product-card
-      image="/assets/images/refrigerator-stabilizer.jpg"
-      name="Refrigerator Stabilizer"
-      capacity="500 VA - 1 kVA"
-      description="Compact stabilizer for refrigerators and freezers."
-      [features]="['High-low voltage cut-off', 'Auto restart feature', 'Wall mountable design', 'LED indicators']">
-    </app-product-card>
-    
-    <app-product-card
-      image="/assets/images/tv-stabilizer.jpg"
-      name="TV & Electronics Stabilizer"
-      capacity="100 VA - 500 VA"
-      description="Protect your sensitive electronic devices from voltage fluctuations."
-      [features]="['Surge protection', 'Compact design', 'Multiple socket outputs', 'Noise filtration']">
-    </app-product-card>
   </div>
   <div class="view-all">
-    <a [routerLink]="'/product'" class="btn">View All Products</a>
+    <a [routerLink]="'/product'" style="font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;" class="btn">View All Products</a>
   </div>
 </div>
 </section>
 
-<section class="testimonials">
+<!-- <section class="testimonials">
 <div class="container">
   <h2 class="section-title">What Our Customers Say</h2>
   <div class="testimonials-grid">
@@ -106,7 +89,7 @@ buttonLink="/product">
     </app-testimonial>
   </div>
 </div>
-</section>
+</section> -->
 
 <section class="cta">
 <div class="container">
