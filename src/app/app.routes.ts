@@ -11,6 +11,6 @@ export const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'services', component: ServicesComponent },
     { path: 'home', component: HomeComponent },
-    { path: '', redirectTo: '/products', pathMatch: 'full' },
-    { path: '**', redirectTo: '/products' } // fallback route
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', redirectTo: '/home' } // fallback route
 ];

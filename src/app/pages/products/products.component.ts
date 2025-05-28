@@ -44,10 +44,10 @@ export class ProductsComponent {
       
       features: [ 'Digital display', 'Time delay system', 'Thermal overload protection','3 Years Warranty '],
       variants: [
-        { name: 'Standard', capacity: '1.5 Ton AC', range: '175V-270V' },
-        { name: 'Standard', capacity: '2 Ton AC', range: '175V-270V' },
-        { name: 'Deluxe', capacity: '1.5 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' },
-        { name: 'Deluxe', capacity: '2 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' }
+        { name: 'Standard', capacity: '4kva 1.5 Ton AC', range: '175V-270V' },
+        { name: 'Standard', capacity: '5kva 2 Ton AC', range: '175V-270V' },
+        { name: 'Deluxe', capacity: '4kva 1.5 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' },
+        { name: 'Deluxe', capacity: '5kva 2 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' }
       ]
     },
     {
@@ -60,10 +60,10 @@ export class ProductsComponent {
     
       features: ['Wide input range', 'Advanced surge protection', 'Wall mountable', ' 3 Years Warranty '],
       variants: [
-        { name: 'Supreme', capacity: '1.5 Ton AC', range: '150V-280V' },
-        { name: 'Supreme', capacity: '2 Ton AC', range: '150V-280V' },
-        { name: 'Majestic', capacity: '1.5 Ton AC', range: '130V-280V' },
-        { name: 'Majestic', capacity: '2 Ton AC', range: '130V-280V' }
+        { name: 'Supreme', capacity: '4kva 1.5 Ton AC', range: '150V-280V' },
+        { name: 'Supreme', capacity: '5kva 2 Ton AC', range: '150V-280V' },
+        { name: 'Majestic', capacity: '4kva 1.5 Ton AC', range: '130V-280V' },
+        { name: 'Majestic', capacity: '5kva 2 Ton AC', range: '130V-280V' }
       ]
     },
     {
@@ -76,10 +76,10 @@ export class ProductsComponent {
      
       features: ['High Voltage cut-off', 'Energy efficient', 'Digital display', 'Silent operation','3 Years Warranty '],
       variants: [
-        { name: 'Diamond', capacity: '1.5 Ton AC', range: '100V-280V' },
-        { name: 'Diamond', capacity: '2 Ton AC', range: '100V-280V' },
-        { name: 'Platinum', capacity: '1.5 Ton AC', range: '90V-280V' },
-        { name: 'Platinum', capacity: '2 Ton AC', range: '90V-280V' },
+        { name: 'Diamond', capacity: '4kva 1.5 Ton AC', range: '100V-280V' },
+        { name: 'Diamond', capacity: '5kva 2 Ton AC', range: '100V-280V' },
+        { name: 'Platinum', capacity: '4kva 1.5 Ton AC', range: '90V-280V' },
+        { name: 'Platinum', capacity: '5kva 2 Ton AC', range: '90V-280V' },
       ]
     },
     {
