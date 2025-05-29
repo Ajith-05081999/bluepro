@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class BannerComponent {
   @Input() backgroundImage: string = '/assets/images/banner-default.jpg';
-  @Input() title: string = 'VoltGuard Stabilizers';
+  @Input() title: string = 'Bluepro Stabilizers';
   @Input() subtitle: string = '';
   @Input() buttonText: string = '';
   @Input() buttonLink: string = '/';
