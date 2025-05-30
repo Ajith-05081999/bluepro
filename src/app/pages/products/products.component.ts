@@ -44,10 +44,10 @@ export class ProductsComponent {
       
       features: [ 'Digital display', 'Time delay system', 'Thermal overload protection','3 Years Warranty '],
       variants: [
-        { name: 'Standard', capacity: '4kva 1.5 Ton AC', range: '175V-270V' },
-        { name: 'Standard', capacity: '5kva 2 Ton AC', range: '175V-270V' },
-        { name: 'Deluxe', capacity: '4kva 1.5 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' },
-        { name: 'Deluxe', capacity: '5kva 2 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' }
+        { name: 'Standard', capacity: '4KVA 1.5 Ton AC', range: '175V-270V' },
+        { name: 'Standard', capacity: '5KVA 2 Ton AC', range: '175V-270V' },
+        { name: 'Deluxe', capacity: '4KVA 1.5 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' },
+        { name: 'Deluxe', capacity: '5KVA 2 Ton AC', range: '165V-270V', image: '../../assets/365A8894.JPG' }
       ]
     },
     {
@@ -55,15 +55,15 @@ export class ProductsComponent {
       name: 'Double boost Stabilizers',
       head: 'Double boost Stabilizers',
       category: 'split-ac',
-      capacity: '4 KVA/5 KVA',
+      capacity: '4 KVA / 5 KVA',
       image: '../../assets/365A8894.JPG',
     
       features: ['Wide input range', 'Advanced surge protection', 'Wall mountable', ' 3 Years Warranty '],
       variants: [
-        { name: 'Supreme', capacity: '4kva 1.5 Ton AC', range: '150V-280V' },
-        { name: 'Supreme', capacity: '5kva 2 Ton AC', range: '150V-280V' },
-        { name: 'Majestic', capacity: '4kva 1.5 Ton AC', range: '130V-280V' },
-        { name: 'Majestic', capacity: '5kva 2 Ton AC', range: '130V-280V' }
+        { name: 'Supreme', capacity: '4KVA 1.5 Ton AC', range: '150V-280V' },
+        { name: 'Supreme', capacity: '5KVA 2 Ton AC', range: '150V-280V' },
+        { name: 'Majestic', capacity: '4KVA 1.5 Ton AC', range: '130V-280V' },
+        { name: 'Majestic', capacity: '5KVA 2 Ton AC', range: '130V-280V' }
       ]
     },
     {
@@ -71,15 +71,15 @@ export class ProductsComponent {
       name: 'Triple boost Stabilizers',
       head: 'Triple boost Stabilizers',
       category: 'inverter-ac',
-      capacity: '4 KVA/5 KVA',
+      capacity: '4 KVA / 5 KVA',
       image: '../../assets/365A8894.JPG',
      
       features: ['High Voltage cut-off', 'Energy efficient', 'Digital display', 'Silent operation','3 Years Warranty '],
       variants: [
-        { name: 'Diamond', capacity: '4kva 1.5 Ton AC', range: '100V-280V' },
-        { name: 'Diamond', capacity: '5kva 2 Ton AC', range: '100V-280V' },
-        { name: 'Platinum', capacity: '4kva 1.5 Ton AC', range: '90V-280V' },
-        { name: 'Platinum', capacity: '5kva 2 Ton AC', range: '90V-280V' },
+        { name: 'Diamond', capacity: '4KVA 1.5 Ton AC', range: '100V-280V' },
+        { name: 'Diamond', capacity: '5KVA 2 Ton AC', range: '100V-280V' },
+        { name: 'Platinum', capacity: '4KVA 1.5 Ton AC', range: '90V-280V' },
+        { name: 'Platinum', capacity: '5KVA 2 Ton AC', range: '90V-280V' },
       ]
     },
     {
@@ -87,7 +87,7 @@ export class ProductsComponent {
       name: 'Deep freezer Stabilizers',
       head: 'Deep freezer Stabilizers',
       category: 'heavy-duty-ac',
-      capacity: '1 KVA/ 2 KVA',
+      capacity: '1 KVA / 2 KVA',
       image: '../../assets/365A8894.JPG',
 
       features: ['Ultra-wide operating range','Digital display', 'Auto restart', 'Heavy load support','3 Years Warranty '],
